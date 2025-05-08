@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_hub_dashboard/core/helper_function/routing/app_routes.dart';
 import 'package:fruits_hub_dashboard/core/widgets/custom_buttom.dart';
 
 class DashboardViewBody extends StatelessWidget {
@@ -12,7 +13,9 @@ class DashboardViewBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CustomButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, AppRoutes.addProduct);
+            },
             text: 'Add New Fruit',
           ),
         ],

@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         return windows;
       case TargetPlatform.linux:
@@ -74,4 +68,26 @@ class DefaultFirebaseOptions {
     storageBucket: 'fruits-hub-27b09.firebasestorage.app',
     measurementId: 'G-FW54H1Z225',
   );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyDLViczRyoa_wK8hA6paRbpI_LxZpavsvI',
+    appId: '1:591561989240:web:7294a84d2a6e259b13218d',
+    messagingSenderId: '591561989240',
+    projectId: 'fruits-hub-27b09',
+    authDomain: 'fruits-hub-27b09.firebaseapp.com',
+    storageBucket: 'fruits-hub-27b09.firebasestorage.app',
+    measurementId: 'G-FW54H1Z225',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyD7SFr4WuGvM_o7cKaQ83kiSAa3cEUjHP0',
+    appId: '1:591561989240:ios:3ae4ca46c4856d6313218d',
+    messagingSenderId: '591561989240',
+    projectId: 'fruits-hub-27b09',
+    storageBucket: 'fruits-hub-27b09.firebasestorage.app',
+    androidClientId: '591561989240-bugrms4dvf9ult0kgvt8arcmkmmo743g.apps.googleusercontent.com',
+    iosClientId: '591561989240-opjpaklu936k4pmn0rvij7jn2tmosphj.apps.googleusercontent.com',
+    iosBundleId: 'com.example.fruitsHubDashboard',
+  );
+
 }
