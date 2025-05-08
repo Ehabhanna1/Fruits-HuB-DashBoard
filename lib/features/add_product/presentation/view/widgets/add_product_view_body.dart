@@ -31,7 +31,9 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
               SizedBox(height: 16,),
               CustomTextFormField(hintText: 'Product Discription', keyboardType: TextInputType.text,maxLines: 5,),
               SizedBox(height: 16,),
-              ImageField(),
+              ImageField(onFileChanged: (image){
+                
+              }),
         
         
         
