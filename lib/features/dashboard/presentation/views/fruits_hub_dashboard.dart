@@ -9,6 +9,8 @@ class FruitsHubDashboard extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Fruits Hub Dashboard'),
+        centerTitle: true,
+        leading: SizedBox(),
       ),
       body: const DashboardViewBody(),
     );
