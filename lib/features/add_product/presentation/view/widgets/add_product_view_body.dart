@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub_dashboard/core/widgets/custom_text_form_field.dart';
+import 'package:fruits_hub_dashboard/features/add_product/presentation/view/widgets/image_field.dart';
 
 class AddProductViewBody extends StatefulWidget {
   const AddProductViewBody({super.key});
@@ -29,7 +30,8 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
               CustomTextFormField(hintText: 'Product Code', keyboardType: TextInputType.number),
               SizedBox(height: 16,),
               CustomTextFormField(hintText: 'Product Discription', keyboardType: TextInputType.text,maxLines: 5,),
-              
+              SizedBox(height: 16,),
+              ImageField(),
         
         
         
